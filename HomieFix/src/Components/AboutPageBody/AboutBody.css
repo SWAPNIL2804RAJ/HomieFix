@@ -1,0 +1,224 @@
+/* AboutBody.css */
+
+.about-us-page {
+  font-family: Arial, sans-serif;
+  color: #edbfbf;
+  margin-top: 3%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-us-header {
+  background-color: #1e4a77;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  padding: 3%;
+}
+
+.about-us-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-us-header p {
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* --------------------- */
+/* About Us Sections */
+
+.mission-section, .values-section {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  margin-left: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+  text-align: center; /* Center the text */
+}
+
+.mission-section:hover, .values-section:hover {
+  cursor: pointer;
+}
+
+.mission-section h2, .values-section h2 {
+  font-size: 2rem;
+  color: #107aa1;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block; /* Inline block for underline effect */
+}
+
+.mission-section h2::after, .values-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #107aa1;
+  transition: width 0.3s ease-in-out;
+}
+
+.mission-section h2:hover::after, .values-section h2:hover::after {
+  width: 100%;
+}
+
+.mission-section p, .values-section ul {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.values-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values-section ul li {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.values-section ul li:hover {
+  border: 3px solid #2dc859;
+  transform: scale(1.02);
+}
+
+.values-section ul li strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #0ca769;
+  margin-bottom: 5px;
+}
+
+.map-and-details {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f3f5f4;
+}
+
+.details-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-container h2 {
+  font-size: 2rem;
+  color: #3473b3;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.details-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1e4a77;
+  transition: width 0.3s ease-in-out;
+}
+
+.details-container h2:hover::after {
+  width: 100%;
+}
+
+.office {
+  margin-bottom: 20px;
+  transition: border 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.office:hover {
+  transform: scale(1.02);
+  border: 2px solid #2d87c8;
+}
+
+.office h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.office p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #248384;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.contact-info > div {
+  max-width: 300px;
+  margin-bottom: 20px;
+  background-color: #657dde;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.contact-info a {
+  color: #ffff;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.contact-info:hover {
+  transform: scale(1.02);
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

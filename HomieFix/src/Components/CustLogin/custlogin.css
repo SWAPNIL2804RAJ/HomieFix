@@ -1,0 +1,100 @@
+.custlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.innerBox{
+    height: fit-content;
+    width: 100%;
+    background-color: #ffff;
+    box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.custlogin h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.custlogin form {
+    background: #a4e2bd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100%;
+}
+
+.custlogin form div {
+    margin-bottom: 10px;
+}
+
+.custlogin label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.custlogin input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.custlogin input:focus {
+    outline: none;
+    border-color: #1baa94;
+}
+
+.custlogin button {
+    width: 100%;
+    padding: 10px;
+    border: 2px #35c381 solid;
+    border-radius: 7px;
+    background: #edf1ef;
+    color: #19c675;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    margin-top: 2%;
+}
+
+.custlogin button:hover {
+    background: #35c381;
+    border: #35c381 2px solid;
+    color: #e3ede8;
+    border-radius: 7px; 
+}
+
+.custlogin span {
+    display: block;
+    margin-top: 20px;
+    color: #666;
+    text-align: center;
+    font-weight: 400;
+}
+
+.custlogin a {
+    color: #1baa94;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.custlogin a:hover {
+    text-decoration: underline;
+}

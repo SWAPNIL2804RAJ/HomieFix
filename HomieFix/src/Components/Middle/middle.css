@@ -1,0 +1,57 @@
+
+
+.Middle {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer; /* Add pointer cursor */
+
+}
+
+.Middle h1 {
+    text-align: center;
+    font-weight: 600;
+    position: relative; /* Add relative positioning for pseudo-element */
+}
+
+.Middle h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(18, 133, 169);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.Middle h1:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.serviceimage {
+    padding: 20px;  /* Adds padding inside each image container */
+}
+
+.serviceimage img {
+    width: 100%;
+    height: auto;
+    /* display: block; */ /* Dots ko middle me laa deta hai image ke */
+    border-radius: 20px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #626262;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left:  5%;
+    padding-right: 5%;
+}

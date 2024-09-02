@@ -1,0 +1,71 @@
+.footer{
+    margin-top: 3%;
+    width: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 6%;
+    /* background-color: #fbfbfb; */
+}
+
+.fLists{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.fList{
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.fListHeader {
+    margin-bottom: 20px;
+    color: #0a707c;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative; 
+    cursor: pointer;
+}
+
+
+.fListHeader::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0a707c;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.fListHeader:hover::after {
+    width: 100%;
+    left: 100%;
+}
+
+.fListItem{
+    margin-bottom: 20px;
+    color: #0a707c;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fListItem:hover{
+    transition: 0.5s;
+    transform: scale(1.08);
+}
+
+.fText{
+    align-items: center;
+    font-weight: 600;
+    text-align: center;
+}
