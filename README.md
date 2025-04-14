@@ -1,7 +1,7 @@
-🛠️ HomieFix
+#🛠️ HomieFix
 HomieFix is a user-friendly platform designed to simplify home maintenance and repair services by connecting homeowners with trusted professionals. Whether it's plumbing, electrical work, carpentry, or general maintenance, HomieFix helps users find reliable service providers quickly and easily.
 
-🚀 Project Overview
+#🚀 Project Overview
 HomieFix is built to bridge the gap between customers and verified tradespeople. It allows users to browse available services, book appointments, and leave feedback — all in a few simple steps.
 
 Key features:
@@ -70,9 +70,9 @@ cd server && npm start
 # Start the frontend
 cd client && npm start
 
-✨ Contributions
+#✨ Contributions
 We welcome contributions! Feel free to fork the repo and submit a pull request.
 
-📫 Contact
+#📫 Contact
 For any questions or support, reach out to us at:
 📧 support@homiefix.com
