@@ -1,10 +1,11 @@
-🛠️ # HomieFix
+# 🛠️ HomieFix
+
 HomieFix is a user-friendly platform designed to simplify home maintenance and repair services by connecting homeowners with trusted professionals. Whether it's plumbing, electrical work, carpentry, or general maintenance, HomieFix helps users find reliable service providers quickly and easily.
 
-#🚀 Project Overview
+# 🚀 Project Overview
 HomieFix is built to bridge the gap between customers and verified tradespeople. It allows users to browse available services, book appointments, and leave feedback — all in a few simple steps.
 
-Key features:
+# Key features:
 
 🔍 Service Matching: Find local professionals based on your area and pincode.
 
@@ -16,7 +17,7 @@ Key features:
 
 💬 Real-time Updates & Reviews: Stay informed and leave feedback on services.
 
-🧱 Tech Stack
+# 🧱 Tech Stack
 Frontend: React.js, HTML5, CSS3, JavaScript
 
 Backend: Node.js, Express.js
@@ -27,7 +28,7 @@ Authentication: JWT (User & Admin)
 
 Hosting: Not deployed yet. It's still under development!
 
-📂 Project Structure
+# 📂 Project Structure
 
 /client           → React frontend  
 /server           → Node.js backend  
@@ -35,17 +36,18 @@ Hosting: Not deployed yet. It's still under development!
 /controllers      → Auth logic  
 /routes           → API routes  
 
-🔐 Admin Features
+#🔐 Admin Features
+
 - Admin login and profile management
 - Post jobs with area & pincode
 - View and manage user bookings
 
-👤 User Features
+# 👤 User Features
 - User registration and login
 - View available jobs by location
 - Book services and track status
 
-📸 Screenshots 
+# 📸 Screenshots 
 
 ![image](https://github.com/user-attachments/assets/99436477-c650-45c3-9f9f-875ade2eecf4)
 ![image](https://github.com/user-attachments/assets/45c981a7-fd01-45da-9034-9234b4c4c80b)
@@ -58,7 +60,7 @@ Hosting: Not deployed yet. It's still under development!
 ![image](https://github.com/user-attachments/assets/2f6df0de-750e-4a16-afeb-365822ebaf0b)
 ![image](https://github.com/user-attachments/assets/560971f8-b60c-4638-8062-576203fd9178)
 
-📦 Installation
+# 📦 Installation
 
 # Install dependencies
 cd server && npm install
@@ -70,9 +72,9 @@ cd server && npm start
 # Start the frontend
 cd client && npm start
 
-#✨ Contributions
+# ✨ Contributions
 We welcome contributions! Feel free to fork the repo and submit a pull request.
 
-#📫 Contact
+# 📫 Contact
 For any questions or support, reach out to us at:
 📧 support@homiefix.com
