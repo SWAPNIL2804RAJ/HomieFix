@@ -1,4 +1,4 @@
-#🛠️ HomieFix
+🛠️ # HomieFix
 HomieFix is a user-friendly platform designed to simplify home maintenance and repair services by connecting homeowners with trusted professionals. Whether it's plumbing, electrical work, carpentry, or general maintenance, HomieFix helps users find reliable service providers quickly and easily.
 
 #🚀 Project Overview
