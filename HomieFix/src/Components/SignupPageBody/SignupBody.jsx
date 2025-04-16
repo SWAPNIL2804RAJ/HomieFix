@@ -9,7 +9,7 @@ function SignupBody() {
   const navigate = useNavigate();
 
   return (
-    <div className="login-body">
+    <div className="login-body" >
       
       <div className="login-body-container">
       

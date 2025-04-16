@@ -33,8 +33,8 @@ export const Founder = () => {
                 </p>
               </div>
             </li>
-            <li>
-            <div className="cardover">
+            {/* <li> */}
+            {/* <div className="cardover">
               <div className="user-info">
                 <img className="img2 underline" src={founder_2} alt="Ayush" />
                 <div>
@@ -50,7 +50,7 @@ export const Founder = () => {
                 continues to drive the company forward, setting benchmarks in the industry.
                 </p>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
         <hr className="line" />

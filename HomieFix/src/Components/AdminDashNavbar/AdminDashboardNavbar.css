@@ -1,10 +1,10 @@
-.admin-navbar {
+  .admin-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #1c1c1c;
-    color: white;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .adminnavbar_headerlogo {
@@ -14,18 +14,37 @@
     cursor: pointer;
     margin-left: 50%;
   }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #282828;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover, .nav-links .active-link {
+    color: #ebf0f6;
+    font-weight: 600;
+  }
   
   /* Profile Menu */
   .profile-menu {
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 8%; /* Adjusts the space between profile and the right side of the navbar */
+    gap: 1rem;
+    margin-right: 8%; /*Adjusts the space between profile and the right side of the navbar */
   }
   
   .admin-name {
-    margin-right: 1.5rem; /* Increased margin between admin name and dropdown button */
-    font-size: 1.2rem;
+    margin-right: 1rem; /* Increased margin between admin name and dropdown button */
+    font-size: 1.1rem;
+    color: #282828;
   }
   
   .dropdown {
@@ -35,35 +54,46 @@
   .dropdown-button {
     background: none;
     border: none;
-    color: white;
+    color: #282828;
     font-size: 1.1rem;
     cursor: pointer;
-    padding-right: 10px; /* Adds padding between the dropdown button and the logout content */
+    padding-right: 10px; /*Adds padding between the dropdown button and the logout content */
   }
-  
+
+  .dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
   .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    text-align: right;
+    top: 100%;
+    background-color: #7f7d7d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1; /* Increased z-index to make the dropdown content appear on top of the navbar */
+    font-size: 0.9rem;  /* Decreased font size of the dropdown content */
   }
-  
-  .dropdown-content span {
-    color: black;
-    padding: 12px 16px;
-    display: block;
-    cursor: pointer;
-  }
-  
-  .dropdown-content span:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content span {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content span:hover {
+  background-color: #212020;
+}
+
+
+

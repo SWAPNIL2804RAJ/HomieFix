@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');  // "request body -jisko middleware m add krna hai"library hai jo info user s fetchh krnege uske liye
-const cors = require('cors');                 // "cross origin resource sharing" - ek security feature hai jo server s request ko allow krta hai, in short agar user 5000 port par hai toh 3000 port s request nhi bhej skta
+const cors = require('cors');                 // "cors origin resource sharing" - ek security feature hai jo server s request ko allow krta hai, in short agar user 5000 port par hai toh 3000 port s request nhi bhej skta
 const app = express();
 require('./Models/db');                   // "db.js file ko require krne k liye" - db.js file ko require krne k liye
 const PORT = process.env.PORT || 8000;
