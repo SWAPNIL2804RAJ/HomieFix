@@ -79,8 +79,9 @@
 }
 
 .card ul{
-    display: flex;                                 /* Removed flex display becoz 2nd img removed */
+    display:grid;                                 /* Removed flex display becoz 2nd img removed */
     width: 100%;
+    padding-left: 30%;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -158,6 +159,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 30%;
     font-size: 15px;
 }
 
