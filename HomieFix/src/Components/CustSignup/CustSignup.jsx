@@ -43,9 +43,8 @@ const CustSignup = () => {
     }
 
     try {
-      // ✅ Use environment variable here too
-      const url = `${process.env.REACT_APP_API_BASE_URL}/auth/signup`;
 
+      const url = `${import.meta.env.VITE_API_BASE_URL}/auth/signup`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

@@ -28,7 +28,7 @@ const TraderLogin = () => {
       return handleError('Please fill all the fields', { closeButton: false });
     }
     try {
-      const url = "http://localhost:8000/auth/Adminlogin";
+      const url = `${import.meta.env.VITE_API_BASE_URL}/auth/Adminlogin`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

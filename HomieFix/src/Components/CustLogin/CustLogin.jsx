@@ -29,9 +29,8 @@ const CustLogin = () => {
     }
 
     try {
-      // ✅ Use environment variable instead of hardcoding
-      const url = `${process.env.REACT_APP_API_BASE_URL}/auth/login`;
 
+      const url = `${import.meta.env.VITE_API_BASE_URL}/auth/login`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

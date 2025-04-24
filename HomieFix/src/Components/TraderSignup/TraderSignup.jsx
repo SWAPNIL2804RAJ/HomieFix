@@ -50,7 +50,7 @@ const TraderSignup = () => {
       return handleError('Password must be at least 4 characters long and contain at least One Upper Case', { closeButton: false });
     }
     try{
-      const url = "http://localhost:8000/auth/Adminsignup";
+      const url = `${import.meta.env.VITE_API_BASE_URL}/auth/Adminsignup`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
