@@ -14,7 +14,19 @@ app.get('/', (req, res) => {            // "get request" - get request
 });
 
 // Middleware
-app.use(cors());              // "cross origin resource sharing" - ek security feature hai jo server s request ko allow krta hai
+app.use(cors({
+  origin: [
+    'http://localhost:3000',  // React default
+    'http://localhost:5173',  // Vite default
+    'http://localhost:5174',  // Alternative Vite port
+    'https://homie-fix.vercel.app'  // Your production frontend
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
+// "cross origin resource sharing" - ek security feature hai jo server s request ko allow krta hai
+
 app.use(bodyParser.json());    // "json data ko parse krne k liye" - json data ko parse krne k liye
 app.use(express.json());      // "json data ko parse krne k liye" - json data ko parse krne k liye
 app.use('/auth', AuthRouter);

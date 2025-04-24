@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon index.js",
     "backend": "nodemon index.js",
-    "build": "npm --prefix frontend run build"
+    "build": "npm --prefix frontend run build",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
