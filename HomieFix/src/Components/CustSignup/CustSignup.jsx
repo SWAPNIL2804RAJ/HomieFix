@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import './custsignup.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { handleError, handleSuccess } from './util';
 
 const CustSignup = () => {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [signupInfo, setSignupInfo] = useState({
-    name: "",
-    number: "",
-    email: "",
-    password: ""
+    name: '',
+    number: '',
+    email: '',
+    password: ''
   });
 
   const handleChange = (e) => {
@@ -21,10 +20,11 @@ const CustSignup = () => {
     setSignupInfo({ ...signupInfo, [name]: value });
   };
 
-  const handleSignup = async(e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+
     const { name, number, email, password } = signupInfo;
-    console.log('signupInfo:', signupInfo);
+
     if (!name || !number || !email || !password) {
       return handleError('Please fill all the fields', { closeButton: false });
     }
@@ -38,41 +38,37 @@ const CustSignup = () => {
     }
 
     const passwordRegex = /^(?=.*[A-Z]).{4,}$/;
-    if (!passwordRegex.test(password)) { 
+    if (!passwordRegex.test(password)) {
       return handleError('Password must be at least 4 characters long and contain at least One Upper Case', { closeButton: false });
     }
-    try{
-      const url = "http://localhost:8000/auth/signup";
+
+    try {
+      // ✅ Use environment variable here too
+      const url = `${process.env.REACT_APP_API_BASE_URL}/auth/signup`;
+
       const response = await fetch(url, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(signupInfo),
+        body: JSON.stringify(signupInfo)
       });
-      
+
       const result = await response.json();
       const { success, message } = result;
+
       if (!success) {
         return handleError('User already exists. Please Login.', { closeButton: false });
-      }
-
-      else {
+      } else {
         handleSuccess('Signup successful!', { closeButton: false });
-        
-        setTimeout( () => {
+        setTimeout(() => {
           navigate('/UserDashboard');
-        }, 1500)
+        }, 1500);
       }
-
-    }catch(err){
+    } catch (err) {
       handleError('Signup failed!', { closeButton: false });
     }
-
-    // Add your signup logic here
-    return handleSuccess('Signup successful !', { closeButton: false });
   };
-
 
   return (
     <div className='custsignup'>
@@ -81,7 +77,6 @@ const CustSignup = () => {
       <form onSubmit={handleSignup}>
         <div className='innerBox'>
           <div>
-
             <label htmlFor='name'>Name</label>
             <input
               onChange={handleChange}
@@ -122,15 +117,17 @@ const CustSignup = () => {
               value={signupInfo.password}
             />
           </div>
-          <button >Signup</button>
-          <span>Already have an account?
-            <br /><Link to='/UserLogin'>Login</Link>
+          <button>Signup</button>
+          <span>
+            Already have an account?
+            <br />
+            <Link to='/UserLogin'>Login</Link>
           </span>
         </div>
       </form>
       <ToastContainer closeButton={false} />
     </div>
   );
-}
+};
 
 export default CustSignup;

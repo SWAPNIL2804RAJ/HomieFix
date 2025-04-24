@@ -1,49 +1,54 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import './custlogin.css';
 import { handleError, handleSuccess } from '../CustSignup/util';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CustLogin = () => {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [loginInfo, setLoginInfo] = useState({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const copyLoginInfo = { ...loginInfo };
-    copyLoginInfo[name] = value;
-    setLoginInfo(copyLoginInfo);
-  }
+    setLoginInfo({ ...loginInfo, [name]: value });
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     const { email, password } = loginInfo;
+
     if (!email || !password) {
       return handleError('Please fill all the fields', { closeButton: false });
     }
+
     try {
-      const url = "http://localhost:8000/auth/login";
+      // ✅ Use environment variable instead of hardcoding
+      const url = `${process.env.REACT_APP_API_BASE_URL}/auth/login`;
+
       const response = await fetch(url, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(loginInfo),
+        body: JSON.stringify(loginInfo)
       });
+
       const result = await response.json();
       const { success, message, jwtToken, name } = result;
+
       if (success) {
         handleSuccess(message);
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
         setTimeout(() => {
-          navigate('/UserDashboard')
+          navigate('/UserDashboard');
         }, 1500);
       } else {
         handleError(message, { closeButton: false });
@@ -51,14 +56,14 @@ const CustLogin = () => {
     } catch (err) {
       handleError('Something went wrong. Please try again later.', { closeButton: false });
     }
-  }
+  };
 
   return (
     <div className='custlogin'>
       <h1>Login</h1>
       Welcome back! Log in to continue your journey with us
       <form>
-        <div className='innerBox'>  
+        <div className='innerBox'>
           <div>
             <label htmlFor='email'>Email</label>
             <input
@@ -81,15 +86,16 @@ const CustLogin = () => {
             />
           </div>
           <button onClick={handleLogin}>Login</button>
-          <span>Don't have an account? 
-            <br /><Link to='/UserSignup'>Signup</Link>
+          <span>
+            Don't have an account?
+            <br />
+            <Link to='/UserSignup'>Signup</Link>
           </span>
         </div>
       </form>
-      <ToastContainer closeButton={false}/>    
-      {/* koi bhi toast notification aayega toh yeh ToastContainer usko display karega */}
+      <ToastContainer closeButton={false} />
     </div>
-  )
-}
+  );
+};
 
 export default CustLogin;
